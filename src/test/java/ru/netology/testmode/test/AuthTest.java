@@ -43,7 +43,7 @@ public class AuthTest {
         $("[data-test-id=login] input").setValue(notRegisteredUser.getLogin());
         $("[data-test-id=password] input").setValue(notRegisteredUser.getPassword());
         $(".button").click();
-        $$(".notification__content").find(exactText("шибка! " + "Неверно указан логин или пароль")).shouldBe(exist);
+        $$(".notification__content").find(exactText("Ошибка! " + "Неверно указан логин или пароль")).shouldBe(exist);
     }
 
     @Test
